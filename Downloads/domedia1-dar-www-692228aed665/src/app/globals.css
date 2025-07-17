@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-cairo);
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.marquee {
+	animation: marquee 45s linear infinite;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.marquee:hover {
+	animation-play-state: paused;
+}
